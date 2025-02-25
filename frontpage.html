@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive E-Commerce Website</title>
+    <!---- Link To CSS -->
+    <link rel="stylesheet" href="stylee.css">
+    <!---- Box Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-t-shirt'></i> Adidas</a>
+
+        <!-- Icons -->
+        <div class="header-icons">
+            <i class='bx bx-user' id="user-icon"><span> Login</span></i>
+        </div>
+
+        <!-- User Login -->
+        <div class="user"> 
+            <h2>Login Now</h2>
+            <input type="email" name="email" placeholder="Email ID" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <a href="index.html"><input type="submit" value="Login" class="login-btn"></a>
+            <p>Forgot Password? <a href="#">Reset Now</a></p>
+            <p>Don't have an account? <a href="#" onclick="showRegister()">Create One</a></p>
+        </div>
+
+        <!-- Register Page -->
+        <div class="register_page" id="uregister" style="display: none;">
+            <h1 class="heading">User <span>Registration</span></h1>
+            <input type="text" name="firstname" placeholder="Firstname" required>
+            <input type="text" name="surname" placeholder="Surname" required>
+            <input type="tel" name="mobile" placeholder="Mobile" required>
+            <input type="email" name="email" placeholder="Email ID" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <input type="submit" value="Register" class="register-btn">
+            <p>Already have an Account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </header>
+
+    <!---Home-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <!--<span>Shop Now</span>-->
+            <h1>New Arrival of <br>Fresh Products</h1>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+        <div class="home-img">
+            <img src="Images/home.png" alt="">
+        </div>
+    </section>
+
+    <!-- Link To JS -->
+    <script src="main.js"></script>
+</body>
+</html>

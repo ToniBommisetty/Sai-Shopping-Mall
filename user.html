@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Nav Bar -->
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-t-shirt'></i> Adidas</a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#new">New Araivals</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+        <!--Icons-->
+        <div class="header-icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-user' id="user-icon" onclick="toggleMenu()"></i>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="Images/profile-pic.png" alt="">
+                    <h2>Toni Bommisetty</h2>
+                </div>
+                <hr>
+                <a href="#" class="sub-menu-link">
+                    <i class='bx bx-user'></i>
+                    <p>Account</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i style='font-size:24px' class='fa'>&#xf084;</i>
+                    <p>Password</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class='bx bxs-cart'></i>
+                    <p>View Orders</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class='bx bx-support'></i>
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="frontpage.html" class="sub-menu-link">
+                    <i style="font-size:24px" class="fa">&#xf08b;</i>
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+        
+    </header>
+
+
+    <!-- User Dashboard -->
+         <!---Home-->
+         <section class="home" id="home">
+            <div class="home-text">
+                <h1>Welcome to Your <br>Dashboard</h1>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+            <div class="home-img">
+                <img src="Images/home.png" alt="Home Image">
+            </div>
+        </section>
+        <!----New Arrivals-->
+        <section class="new" id="new">
+            <div class="heading">
+                <h1>New <span>Arrival</span></h1>
+            </div>
+            <div class="swiper new-arrival">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide box">
+                        <img src="Images/new1.jpg" alt="">
+                        <div class="content">
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="Images/Tshirt3.jpeg" alt="">
+                        <div class="content">
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="Images/Tshirt4.jpeg" alt="">
+                        <div class="content">
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide box">
+                        <img src="Images/Tshirt5.png" alt="">
+                        <div class="content">
+                            <a href="#" class="btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----Product-->
+        <section class="products" id="products">
+            <div class="heading">
+                <h1>Our <span>Products</span></h1>
+            </div>
+            <div class="product-container">
+                <div class="box">
+                    <img src="Images/Products1.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products2.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products3.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products4.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products5.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products6.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products7.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/Products8.webp" alt="">
+                    <div class="content">
+                        <h2>T-Shirt 14A</h2>
+    
+                        <div class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <span>$50.05</span>
+                        <i class='bx bx-cart-alt' ></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <div class="heading">
+                <h1>Our <span>Customer's</span></h1>
+            </div>
+            <div class="reviews-container">
+                <div class="box">
+                    <img src="Images/new1.jpg" alt="">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h2>Will Smith</h2>
+                </div>
+                <div class="box">
+                    <img src="Images/Review.png" alt="">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h2>Will Smith</h2>
+                </div>
+                <div class="box">
+                    <img src="Images/Products1.webp" alt="">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h2>Will Smith</h2>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-box">
+            <h2>adidas</h2>
+            <p>Orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Help & Support</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Term of use</a></li>
+            <li><a href="#">FAQ</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>Our Branches</h3>
+            <li><a href="#">India</a></li>
+            <li><a href="#">Phillippines</a></li>
+            <li><a href="#">United Kingdom</a></li>
+            <li><a href="#">Pakistan</a></li>
+            <li><a href="#">United states of America</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>Payment Method</h3>
+            <div class="payment">
+                <img src="Images/visa.png" alt="">
+                <img src="Images/mastercard.png" alt="">
+                <img src="Images/paypal.png" alt="">
+                <img src="Images/american-express.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; CarpoolVenom All Right Reserved.</p>
+    </div>
+    <script>
+        function toggleMenu() {
+            var subMenu = document.getElementById("subMenu");
+            subMenu.classList.toggle("open-menu");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let menuIcon = document.getElementById("menu-icon");
+            let navbar = document.querySelector(".navbar");
+
+            menuIcon.addEventListener("click", function () {
+                navbar.classList.toggle("active");
+            });
+        });
+    </script>
+    <!-- Link To JS -->
+    <script src="main.js"></script>
+
+</body>
+</html>
