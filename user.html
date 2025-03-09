@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive E-Commerce Website</title>
+    <link rel="icon" href="Images/adidas.png">
+    <title>TO||NI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <!-- Nav Bar -->
     <header>
-        <a href="#" class="logo"><i class='bx bxs-t-shirt'></i> Adidas</a>
+        <a href="#" class="logo"><i class='bx bxs-t-shirt'></i> TO||NI</a>
         <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="#new">New Araivals</a></li>
@@ -21,46 +24,9 @@
         <!--Icons-->
         <div class="header-icons">
             <i class='bx bx-menu' id="menu-icon"></i>
-            <i class='bx bx-user' id="user-icon" onclick="toggleMenu()"></i>
+            <a href="Account.html"><i class='bx bx-user' id="user-icon" onclick="toggleMenu()"></i></a>
         </div>
-        <div class="sub-menu-wrap" id="subMenu">
-            <div class="sub-menu">
-                <div class="user-info">
-                    <img src="Images/profile-pic.png" alt="">
-                    <h2>Toni Bommisetty</h2>
-                </div>
-                <hr>
-                <a href="#" class="sub-menu-link">
-                    <i class='bx bx-user'></i>
-                    <p>Account</p>
-                    <span>></span>
-                </a>
-                <a href="#" class="sub-menu-link">
-                    <i style='font-size:24px' class='fa'>&#xf084;</i>
-                    <p>Password</p>
-                    <span>></span>
-                </a>
-                <a href="#" class="sub-menu-link">
-                    <i class='bx bxs-cart'></i>
-                    <p>View Orders</p>
-                    <span>></span>
-                </a>
-                <a href="#" class="sub-menu-link">
-                    <i class='bx bx-support'></i>
-                    <p>Help & Support</p>
-                    <span>></span>
-                </a>
-                <a href="frontpage.html" class="sub-menu-link">
-                    <i style="font-size:24px" class="fa">&#xf08b;</i>
-                    <p>Logout</p>
-                    <span>></span>
-                </a>
-            </div>
-        </div>
-        
     </header>
-
-
     <!-- User Dashboard -->
          <!---Home-->
          <section class="home" id="home">
@@ -73,39 +39,39 @@
             </div>
         </section>
         <!----New Arrivals-->
-        <section class="new" id="new">
-            <div class="heading">
-                <h1>New <span>Arrival</span></h1>
-            </div>
-            <div class="swiper new-arrival">
-                <div class="swiper-wrapper ">
-                    <div class="swiper-slide box">
-                        <img src="Images/new1.jpg" alt="">
-                        <div class="content">
-                            <a href="#" class="btn">Buy Now</a>
-                        </div>
+    <section class="new" id="new">
+        <div class="heading">
+            <h1>New <span>Arrival</span></h1>
+        </div>
+        <div class="swiper new-arrival">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide box">
+                    <img src="Images/new1.jpg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Buy Now</a>
                     </div>
-                    <div class="swiper-slide box">
-                        <img src="Images/Tshirt3.jpeg" alt="">
-                        <div class="content">
-                            <a href="#" class="btn">Buy Now</a>
-                        </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="Images/Tshirt3.jpeg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Buy Now</a>
                     </div>
-                    <div class="swiper-slide box">
-                        <img src="Images/Tshirt4.jpeg" alt="">
-                        <div class="content">
-                            <a href="#" class="btn">Buy Now</a>
-                        </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="Images/Tshirt4.jpeg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Buy Now</a>
                     </div>
-                    <div class="swiper-slide box">
-                        <img src="Images/Tshirt5.png" alt="">
-                        <div class="content">
-                            <a href="#" class="btn">Buy Now</a>
-                        </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="Images/Tshirt5.png" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Buy Now</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
         <!-----Product-->
         <section class="products" id="products">
             <div class="heading">
@@ -345,9 +311,28 @@
                 navbar.classList.toggle("active");
             });
         });
+    
+
+        const swiper = new Swiper('.new-arrival', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 20,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
+
     </script>
     <!-- Link To JS -->
     <script src="main.js"></script>
-
 </body>
 </html>

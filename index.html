@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive E-Commerce Website</title>
+    <link rel="icon" href="Images/adidas.png">
+    <title>TO||NI</title>
     <!----Link To CSS-->
     <link rel="stylesheet" href="style.css">
     <!----Box Icons-->
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    
 </head>
 <body>
     <!--Nav Bar-->
     <header>
-        <a href="#" class="logo"><i class='bx bxs-t-shirt'></i> Adidas</a>
+        <a href="#" class="logo"><i class='bx bxs-t-shirt'></i> TO||NI</a>
 
         <ul class="navbar">
             <li><a href="#home">Home</a></li>
@@ -29,7 +30,15 @@
             <i class='bx bx-menu' id="menu-icon"></i>
             <i class='bx bx-search-alt-2' id="search-icon"></i>
             <i class='bx bx-cart-add' id="cart-icon"></i>
-            <a href="user.html"><i class='bx bx-user' id="user-icon"></i></a>
+            <i class='bx bx-user' id="user-icon" onclick="toggleMenu()"></i>
+            <div class="user-action">
+                <ul>
+                    <li>
+                        <a href="Account.html"><input type="button" value="Profile"></a><br>
+                        <a href="frontpage.html"><input type="button" value="Logout"></a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <!---Search Box-->
@@ -64,7 +73,7 @@
         </div>  
 
         <!---  User  -->
-        <div class="wrapper">
+        <div class="wrapper" style="display: none;">
             <div class="login-page" id="lgn-btn">  
                 <h2 class="heading">Login Now</h2>
                 <input type="email" placeholder="Email ID">
@@ -93,7 +102,7 @@
         <div class="home-text">
             <span>Shop Now</span>
             <h1>New Arrival of <br>Fresh Products</h1>
-            <a href="#" class="btn">Shop Now</a>
+            <a href="#products" class="btn">Shop Now</a>
         </div>
         <div class="home-img">
             <img src="Images/home.png" alt="">
@@ -284,7 +293,7 @@
                     <i class='bx bxs-star-half'></i>
                 </div>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                <h2>Will Smith</h2>
+                <h2>Dinesh</h2>
             </div>
             <div class="box">
                 <img src="Images/Review.png" alt="">
@@ -296,7 +305,7 @@
                     <i class='bx bxs-star-half'></i>
                 </div>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                <h2>Will Smith</h2>
+                <h2>Toni Bommisetty</h2>
             </div>
             <div class="box">
                 <img src="Images/Products1.webp" alt="">
@@ -308,7 +317,7 @@
                     <i class='bx bxs-star-half'></i>
                 </div>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                <h2>Will Smith</h2>
+                <h2>Savan</h2>
             </div>
         </div>
     </section>
@@ -355,9 +364,49 @@
         <p>&#169; CarpoolVenom All Right Reserved.</p>
     </div>
 
+    
     <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Link To JS-->
      <script src="main.js"></script>
+     <script>
+        const swiper = new Swiper('.new-arrival', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 20,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
+
+
+    if (!localStorage.getItem("cart")) {
+        localStorage.setItem("cart", JSON.stringify([]));
+    }
+
+    // Retrieve user data from sessionStorage
+    const user = JSON.parse(sessionStorage.getItem('user'));
+
+    // Display user information if available
+    if (user) {
+        document.getElementById('user-name').textContent = `${user.firstname} ${user.surname}`;
+    }
+
+    // Logout functionality: Clear session storage and redirect to the login page
+    document.getElementById('logout-btn').addEventListener('click', () => {
+        sessionStorage.removeItem('user');
+        window.location.href = 'frontpage.html';  // Redirect to the login page
+    });
+     </script>
+     <script src="server.js"></script>
 </body>
 </html>

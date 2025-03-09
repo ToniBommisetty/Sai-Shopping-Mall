@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive E-Commerce Website</title>
+    <link rel="icon" href="Images/adidas.png">
+    <title>TO||NI</title>
     <!---- Link To CSS -->
     <link rel="stylesheet" href="stylee.css">
     <!---- Box Icons -->
@@ -11,36 +12,71 @@
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+<style>
+    /* Hover effect for the "Shop Now" button */
+.home .btn {
+    background-color: #ff7f50;      /* Coral color for the button */
+    color: #fff;                    /* White text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+.home .btn:hover {
+    background-color: #ff5722;      /* Darker shade on hover */
+    transform: scale(1.1);          /* Slight zoom-in effect */
+}
+
+
+</style>
 <body>
+    <div class="overlay" id="overlay"></div>
+
     <header>
-        <a href="#" class="logo"><i class='bx bxs-t-shirt'></i> Adidas</a>
+        <a href="#" class="logo"><i class='bx bxs-t-shirt'></i> TO||NI</a>
 
         <!-- Icons -->
         <div class="header-icons">
             <i class='bx bx-user' id="user-icon"><span> Login</span></i>
         </div>
 
-        <!-- User Login -->
+        <!-- Login Form -->
         <div class="user"> 
             <h2>Login Now</h2>
             <input type="email" name="email" placeholder="Email ID" required>
             <input type="password" name="password" placeholder="Enter your password" required>
-            <a href="index.html"><input type="submit" value="Login" class="login-btn"></a>
+            <button type="button" id="login-btn" class="login-btn">Login</button>
             <p>Forgot Password? <a href="#">Reset Now</a></p>
             <p>Don't have an account? <a href="#" onclick="showRegister()">Create One</a></p>
         </div>
 
+
         <!-- Register Page -->
-        <div class="register_page" id="uregister" style="display: none;">
-            <h1 class="heading">User <span>Registration</span></h1>
-            <input type="text" name="firstname" placeholder="Firstname" required>
-            <input type="text" name="surname" placeholder="Surname" required>
-            <input type="tel" name="mobile" placeholder="Mobile" required>
-            <input type="email" name="email" placeholder="Email ID" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-            <input type="submit" value="Register" class="register-btn">
-            <p>Already have an Account? <a href="#" onclick="showLogin()">Login</a></p>
+    <div class="register_page" id="uregister">
+        <h1>User <span>Registration</span></h1>
+        <input type="text" id="firstname" name="firstname" placeholder="Firstname" required>
+        <input type="text" id="surname" name="surname" placeholder="Surname" required>
+        <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required>
+        <input type="email" id="email" name="email" placeholder="Email ID" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+        <button type="button" id="register-btn" class="register-btn">Register</button>
+        <p>Already have an Account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+        <!-- Forgot Password -->
+        <div class="forgot_page" id="uforgot" style="display: none;">
+            <h1 class="heading">Forgot <span>credentials?</span></h1>
+            <form action="your-server-endpoint" method="POST">
+                <label for="email">Enter your email address or username:</label>
+                <input type="text" id="email" name="email" required placeholder="Email or Username">
+                <button type="submit">Submit</button>
+            </form>
+            <div class="back-link">
+                <p>Remember your credentials? <a href="/login">Go back to login</a></p>
+            </div>
         </div>
     </header>
 
@@ -57,6 +93,8 @@
     </section>
 
     <!-- Link To JS -->
-    <script src="main.js"></script>
+    <script src="main.js">
+    </script>
+    <script src="server.js"></script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+    .new-arrival{
+    margin-top: 2rem;
+}
+.new-arrival .box{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--second-color);
+}
+.new-arrival .box img{
+    background-color: var(--second-color);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.new-arrival .box .content{
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 91%, 0.5);
+    overflow: hidden;
+}
+.new-arrival .box:hover .content{
+    top: 0;
+    transition: 0.2s;
+    
+}
+</style>
+<body>
+    <section class="new" id="new">
+        <div class="heading">
+            <h1>New <span>Arrival</span></h1>
+        </div>
+        <div class="swiper new-arrival">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide box">
+                    <img src="Images/new1.jpg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Buy Now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="Images/Tshirt3.jpeg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Buy Now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="Images/Tshirt4.jpeg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Buy Now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="Images/Tshirt5.png" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const swiper = new Swiper('.new-arrival', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 20,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
+    </script>
+</body>
+</html>

@@ -84,11 +84,21 @@ header {
     font-weight: 600;
     column-gap: 0.2rem;
     color: var(--text-color);
+    transition: 0.3s ease;
+}
+.logo:hover{
+    color: var(--main-color);
+    transform: scale(1.1);
 }
 
 .logo .bx {
     font-size: 24px;
     color: var(--main-color);
+}
+.logo .bx:hover{
+    font-size: 24px;
+    color: var(--text-color);
+    transform: scale(1.1);
 }
 
 .header-icons {
@@ -105,137 +115,84 @@ header {
     color: var(--main-color);
 }
 
-/* User Login Box */
-.user {
-    position: absolute;
-    right: 1rem;
-    top: 110%;
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    align-items: center;
-    row-gap: 0.5rem;
-    background: var(--bg-color);
+/* Add a class for blurring the background */
+.blur-background {
+    filter: blur(5px);
+    transition: 0.3s ease; /* Disable interactions with the blurred content */
+}
+
+/* The overlay that appears when the login/register form is active */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;  /* Below the forms but above everything else */
+    display: none;
+    transition: 0.3s ease;
+}
+
+
+/* Common styles for both login and register pages */
+.user, .register_page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid var(--main-color);  /* Consistent border */
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 0.5rem;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 400px;  /* Consistent width */
+    display: none;
+    z-index: 1000;
 }
 
-.user.active {
-    right: 1rem;
-    display: flex;
-    transition: 0.2s;
+.user h2, .register_page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.user h2 {
-    font-size: 1.2rem;
-    color: var(--text-color);
-}
-
-.user .login-btn {
-    background: var(--main-color);
-    color: var(--bg-color);
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
+.user input, .register_page input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.user .login-btn:hover {
-    background: var(--text-color);
-}
-
-.user input {
-    border: none;
-    outline: none;
-    background: var(--second-color);
+.user .login-btn, .register_page .register-btn {
+    width: 100%;
     padding: 10px;
-    border-radius: 0.5rem;
-    width: 100%;
-}
-
-
-
-.user .login-page{
-	position: absolute;
-    right: 0%;
-    top: 110%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 0.5rem;
-    background: var(--bg-color);
-    padding: 20px;
-    border-radius: 0.5rem;
-    box-shadow: var(--box-shadow);
-    width: 300px;
-}
-
-.user .login-page input{
-    height: 10px 30px;
-    margin-bottom: 10px;
+    background-color: #ff7f50;
+    color: #fff;
     border: none;
-    outline: none;
-    background-color: var(--second-color);
-    padding: 10px 5px;
-    border-radius: 0.5rem;
-    width: 100%;
-}
-
-.user .login-page .login-btn{
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
+    border-radius: 5px;
     cursor: pointer;
-    clip-path: polygon(100% 0, 93% 50%, 86% 99%, 0% 100%, 7% 47%, 13% 0%);
+    transition: background-color 0.3s ease;
 }
 
-.user .login-page .login-btn:hover{
-    background-color: var(--text-color);
+.user .login-btn:hover, .register_page .register-btn:hover {
+    background-color: #ff5722;
 }
 
-
-
-.register_page{
-	position: absolute;
-    right: 0%;
-    top: 110%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 0.5rem;
-    background: var(--bg-color);
-    padding: 20px;
-    border-radius: 0.5rem;
-    box-shadow: var(--box-shadow);
-    width: 300px;
-}
-.register_page input{
-    margin-bottom: 5px;
-    border: none;
-    outline: none;
-    background-color: var(--second-color);
-    padding: 10px;
-    border-radius: 0.5rem;
-    width: 100%;
+.user p, .register_page p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
-.register_page .register-btn{
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    cursor: pointer;
-    
+.user p a, .register_page p a {
+    color: #ff7f50;
+    text-decoration: none;
 }
 
-.register_page .register-btn:hover{
-    background-color: var(--text-color);
+.user p a:hover, .register_page p a:hover {
+    text-decoration: underline;
 }
 
 
@@ -261,6 +218,7 @@ header {
 .home-text h1 {
     font-size: 3.4rem;
     margin-bottom: 1rem;
+    
 }
 .home-img {
     display: flex;
@@ -271,4 +229,5 @@ header {
     max-width: 100%;
     height: auto;
     border-radius: 10px; /* Optional: Add some styling to the image */
+    
 }
